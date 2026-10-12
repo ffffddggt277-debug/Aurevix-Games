@@ -1,0 +1,87 @@
+[
+  {
+    "file": "01-home-desktop.png",
+    "passed": true,
+    "observation": "Desktop hero and card grid aligned; SVG marks render cleanly."
+  },
+  {
+    "file": "02-home-mobile.png",
+    "passed": true,
+    "observation": "Mobile hero CTA no longer overlaps decorative caption."
+  },
+  {
+    "file": "03-catalog-mobile.png",
+    "passed": true,
+    "observation": "Mobile catalog filters fit and have readable labels."
+  },
+  {
+    "file": "04-home-tablet.png",
+    "passed": true,
+    "observation": "Tablet header/navigation and two-column cards fit."
+  },
+  {
+    "file": "05-catalog-desktop.png",
+    "passed": true,
+    "observation": "Desktop filters and three-column card grid aligned."
+  },
+  {
+    "file": "06-game-detail.png",
+    "passed": true,
+    "observation": "Detail cover, information, versions and score warning fit."
+  },
+  {
+    "file": "07-game-player.png",
+    "passed": true,
+    "observation": "Real iframe canvas and player controls fit."
+  },
+  {
+    "file": "08-login.png",
+    "passed": true,
+    "observation": "Login form readable with no secret values."
+  },
+  {
+    "file": "09-register.png",
+    "passed": true,
+    "observation": "Registration form readable and labeled."
+  },
+  {
+    "file": "10-profile.png",
+    "passed": true,
+    "observation": "Profile uses Russian file chooser and correct spacing."
+  },
+  {
+    "file": "11-developer.png",
+    "passed": true,
+    "observation": "Creator section and features are aligned."
+  },
+  {
+    "file": "12-publish-form.png",
+    "passed": true,
+    "observation": "Publication fields and file controls are localized and aligned."
+  },
+  {
+    "file": "13-moderation.png",
+    "passed": true,
+    "observation": "Actual fail-closed review state has clear reason and actions."
+  },
+  {
+    "file": "14-sdk-documentation.png",
+    "passed": true,
+    "observation": "SDK module example is valid and readable."
+  },
+  {
+    "file": "15-home-english.png",
+    "passed": true,
+    "observation": "English home is consistently localized."
+  },
+  {
+    "file": "16-publish-mobile.png",
+    "passed": true,
+    "observation": "Mobile publication form fits with truncated account button."
+  },
+  {
+    "file": "17-admin-moderation.png",
+    "passed": true,
+    "observation": "Admin actions and audit labels are localized and rows aligned."
+  }
+]

@@ -1,0 +1,17 @@
+
+> aurevix-games@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ SDK validates result bounds (2.699335ms)
+✔ SDK ignores forged origin and source (13.207954ms)
+✔ SDK propagates errors (1.007378ms)
+✔ all RU and EN interface keys match (0.343753ms)
+✔ browser credentials not exposed to SDK (0.1877ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.893709

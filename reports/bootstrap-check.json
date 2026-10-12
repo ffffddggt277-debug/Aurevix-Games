@@ -1,0 +1,8 @@
+{
+  "local_zip_bootstrap": "passed",
+  "health_http_status": 200,
+  "openapi": "passed",
+  "runtime_env_created": "passed",
+  "real_GitHub_URL_deployment": "not_run",
+  "real_HF_deployment": "not_run"
+}

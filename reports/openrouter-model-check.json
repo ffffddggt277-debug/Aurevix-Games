@@ -1,0 +1,6 @@
+{
+  "request": "GET https://openrouter.ai/api/v1/models",
+  "paid_completion_performed": false,
+  "http_status": 200,
+  "requested_model_found": true
+}

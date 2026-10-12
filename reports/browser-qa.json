@@ -1,0 +1,90 @@
+{
+  "checks": [
+    "Homepage loads live API catalog",
+    "Mobile navigation",
+    "Catalog search",
+    "Empty search state",
+    "Real game, iframe restart",
+    "Browser registration",
+    "Profile edit and favorites",
+    "Browser multipart upload and fail-closed moderation",
+    "Opaque iframe SDK postMessage bridge, authenticated score and board",
+    "Protected admin queue rendered with offline role grant",
+    "Authenticated admin file inspection",
+    "RU/EN switch and persisted preference",
+    "Browser logout and login"
+  ],
+  "errors": [],
+  "badRequests": [],
+  "overflow": [
+    {
+      "name": "01-home-desktop",
+      "overflow": false
+    },
+    {
+      "name": "02-home-mobile",
+      "overflow": false
+    },
+    {
+      "name": "03-catalog-mobile",
+      "overflow": false
+    },
+    {
+      "name": "04-home-tablet",
+      "overflow": false
+    },
+    {
+      "name": "05-catalog-desktop",
+      "overflow": false
+    },
+    {
+      "name": "06-game-detail",
+      "overflow": false
+    },
+    {
+      "name": "07-game-player",
+      "overflow": false
+    },
+    {
+      "name": "08-login",
+      "overflow": false
+    },
+    {
+      "name": "09-register",
+      "overflow": false
+    },
+    {
+      "name": "10-profile",
+      "overflow": false
+    },
+    {
+      "name": "11-developer",
+      "overflow": false
+    },
+    {
+      "name": "12-publish-form",
+      "overflow": false
+    },
+    {
+      "name": "13-moderation",
+      "overflow": false
+    },
+    {
+      "name": "17-admin-moderation",
+      "overflow": false
+    },
+    {
+      "name": "14-sdk-documentation",
+      "overflow": false
+    },
+    {
+      "name": "15-home-english",
+      "overflow": false
+    },
+    {
+      "name": "16-publish-mobile",
+      "overflow": false
+    }
+  ],
+  "screenshot_count": 17
+}

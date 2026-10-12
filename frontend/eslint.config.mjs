@@ -1,0 +1,4 @@
+import js from '@eslint/js';
+import parser from '@typescript-eslint/parser';
+import plugin from '@typescript-eslint/eslint-plugin';
+export default [{ignores:['.next/**']},{files:['src/**/*.{ts,tsx}'],languageOptions:{parser,parserOptions:{ecmaVersion:'latest',sourceType:'module',ecmaFeatures:{jsx:true}},globals:{window:'readonly',document:'readonly',localStorage:'readonly',sessionStorage:'readonly',fetch:'readonly',Headers:'readonly',FormData:'readonly',AbortSignal:'readonly',AbortController:'readonly',setTimeout:'readonly',clearTimeout:'readonly',process:'readonly',console:'readonly',URLSearchParams:'readonly'}},plugins:{'@typescript-eslint':plugin},rules:{...js.configs.recommended.rules,...plugin.configs.recommended.rules,'no-unused-vars':'off','no-undef':'off','no-empty':['error',{allowEmptyCatch:true}]}}];

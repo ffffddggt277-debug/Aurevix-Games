@@ -1,0 +1,33 @@
+{
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "inclusionai/ling-3.1-flash",
+  "real_completion_performed": true,
+  "secret_in_report": false,
+  "http_status": 200,
+  "structured_response_valid": true,
+  "decision": "approved",
+  "reason": "Harmless fictional star-collecting canvas demo with no external links, payments, chat, or personal data collection.",
+  "tokens": {
+    "prompt_tokens": 80,
+    "completion_tokens": 157,
+    "total_tokens": 237,
+    "cost": 0,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 143,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

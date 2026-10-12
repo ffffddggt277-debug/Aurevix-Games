@@ -1,0 +1,7 @@
+{
+  "contains_real_key": false,
+  "real_env_excluded": true,
+  "workflow_supplied": true,
+  "github_actions_run": "not_run",
+  "local_extraction_validation": "passed"
+}

@@ -1,0 +1,18 @@
+
+> aurevix-games@1.0.0 test:integration
+> node tests/integration.mjs
+
+PASS health
+PASS catalog via frontend API client
+PASS registration
+PASS login
+PASS profile
+PASS API authorization/error format
+PASS ZIP upload
+PASS fail-closed moderation status
+PASS published game page
+PASS persistent favorites
+PASS CORS allowed/denied origins
+PASS SDK identity and replay protection
+PASS logout invalidates server token
+13 integration checks passed. Database contains local test data only.

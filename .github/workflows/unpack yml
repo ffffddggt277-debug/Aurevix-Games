@@ -1,0 +1,59 @@
+name: Unpack Aurevix project
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - AUREVIX_GAMES_PUBLIC.zip
+      - .github/workflows/unpack.yml
+permissions:
+  contents: write
+concurrency:
+  group: unpack-aurevix-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract source folders safely
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          from zipfile import ZipFile
+          root = Path.cwd().resolve()
+          with ZipFile('AUREVIX_GAMES_PUBLIC.zip') as archive:
+              assert archive.testzip() is None, 'Corrupt project ZIP'
+              for entry in archive.infolist():
+                  if entry.is_dir():
+                      continue
+                  source = PurePosixPath(entry.filename)
+                  if not source.parts or source.parts[0] != 'aurevix-games':
+                      raise RuntimeError('Unexpected archive root')
+                  parts = source.parts[1:]
+                  if not parts or '..' in parts or '\\' in entry.filename:
+                      raise RuntimeError('Unsafe archive path')
+                  if any(p in {'.git', '.github'} for p in parts):
+                      continue
+                  if any(p.startswith('.env') and p != '.env.example' for p in parts):
+                      continue
+                  target = root.joinpath(*parts).resolve()
+                  if not target.is_relative_to(root):
+                      raise RuntimeError('Unsafe destination')
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(entry))
+          assert Path('frontend/package.json').is_file()
+          assert Path('backend/app.py').is_file()
+          PY
+      - name: Commit extracted source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add frontend backend space-bootstrap sdk docs screenshots reports README.md LICENSE .gitignore DEPLOYMENT_GUIDE_RU.md PUBLIC_DEPLOYMENT_7_STEPS_RU.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Unpack Aurevix source for deployment'
+            git push
+          fi
